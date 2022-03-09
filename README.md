@@ -9,7 +9,7 @@ These operators were created and tested with
 ### Airflow Setup
 1. Create and store 2 Anomalo env variables for authentication within Airflow
 2. Navigate in Airflow to Admin > Variables (URL path append /variable/list) and add 2 new records with Key named `ANOMALO_API_SECRET_TOKEN` and `ANOMALO_INSTANCE_HOST`
-![var](../var.png)
+![var](var.png)
 
 ## Installation
 
@@ -20,7 +20,7 @@ These operators were created and tested with
 ## Usage
 
 1. Obtain Anomalo table name from GUI. For example
-   ![table](../table.png)
+   ![table](table.png)
    would be `public-bq.covid19_nyt.us_counties`
 
 2. This package includes 2 different operators
