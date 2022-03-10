@@ -5,6 +5,7 @@ A set of native Airflow operators for [Anomalo](https://www.anomalo.com/)
 These operators were created and tested with
 * Python 3.6-3.8
 * Airflow 2.2+
+* Anomalo python client 0.0.6
 
 ### Airflow Setup
 1. Create and store 2 Anomalo env variables for authentication within Airflow
@@ -13,9 +14,10 @@ These operators were created and tested with
 
 ## Installation
 
-1. Copy the 2 operator `.py` files to either the `/dags` or `/include` directory of your Airflow installation
-2. Copy the example DAG file to the `/dags` directory of your Airflow installation
-3. Restart Airflow
+1. Install Anomalo's python client on Airflow server via `pip install anomalo`
+2. Copy the 2 operator `.py` files to either the `/dags` or `/include` directory of your Airflow installation
+3. Copy the example DAG file to the `/dags` directory of your Airflow installation
+4. Restart Airflow
 
 ## Usage
 
@@ -36,7 +38,7 @@ These operators were created and tested with
    from AnomaloRunCheck import AnomaloRunCheck
    from AnomaloPassFail import AnomaloPassFail
    ```
-   See `AnomaloDAG.py` for usage example
+   See `anomalo_dag_example.py` for usage example
 
 ## Help
 

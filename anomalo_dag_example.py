@@ -3,8 +3,8 @@ from airflow.utils.dates import days_ago
 from airflow.operators.dummy_operator import DummyOperator
 from datetime import timedelta
 from airflow.models.baseoperator import chain
-from AnomaloRunCheck import AnomaloRunCheck
-from AnomaloPassFail import AnomaloPassFail
+from anomalo_passfail import AnomaloRunCheck
+from anomalo_passfail import AnomaloPassFail
 
 args = {
     'owner': 'AL',

@@ -16,9 +16,6 @@ class AnomaloRunCheck(BaseOperator):
         table_id = self.api_client.get_table_information(table_name=self.tablename)['id']
         run = self.api_client.run_checks(table_id=table_id)
         
-        # For immediate finish
-        #return run
-
         # Wait until all runs complete
         job_id = run['run_checks_job_id']
         while True:
@@ -31,5 +28,4 @@ class AnomaloRunCheck(BaseOperator):
             else:
                 time.sleep(10)
         results = self.api_client.get_run_result(job_id=job_id)
-        print(results)
         return results
