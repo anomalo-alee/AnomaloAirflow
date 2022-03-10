@@ -3,7 +3,7 @@ from airflow.utils.dates import days_ago
 from airflow.operators.dummy_operator import DummyOperator
 from datetime import timedelta
 from airflow.models.baseoperator import chain
-from anomalo_passfail import AnomaloRunCheck
+from anomalo_runchecks import AnomaloRunCheck
 from anomalo_passfail import AnomaloPassFail
 
 args = {
