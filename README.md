@@ -35,8 +35,8 @@ These operators were created and tested with
 
 3. In your DAG, don't forget to import the 2 new modules
    ```
-   from AnomaloRunCheck import AnomaloRunCheck
-   from AnomaloPassFail import AnomaloPassFail
+   from anomalo_passfail import AnomaloRunCheck
+   from anomalo_passfail import AnomaloPassFail
    ```
    See `anomalo_dag_example.py` for usage example
 
