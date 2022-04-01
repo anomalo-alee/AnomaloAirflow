@@ -25,6 +25,7 @@ with DAG(
     anomalo_run = AnomaloRunCheck(
         task_id='AnomaloRunCheck',
         tablename='public-bq.crypto_bitcoin.outputs',
+        timeout='15'
     )
 
     anomalo_validate = AnomaloPassFail(

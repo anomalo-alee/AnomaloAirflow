@@ -27,8 +27,8 @@ These operators were created and tested with
 
 2. This package includes 2 different operators
    1. Run checks
-      * Inputs - Anomalo table
-      * Action - Run all configured checks for this table on the previous date. Waits until all runs are completed before Airfow step concludes
+      * Inputs - Anomalo table + default timeout limit for checks to finish before failure (defaults to 15m)
+      * Action - Run all configured checks for this table on the previous date. Waits until all runs are completed within timeout limit before Airfow step concludes
    2. A result checker
       * Inputs - Anomalo table + list of any variation of the categories of checks that must pass ['data_freshness','data_volume','metric','rule','missing_data','anomaly']
       * Action - Obtains all completed checks for this table on the previous date. If all checks from the inputted list of categories complete with a Pass, Airflow step completes successfully. If any single check from inputted list of categories fail, Airflow DAG throws an exception and immediately fails
