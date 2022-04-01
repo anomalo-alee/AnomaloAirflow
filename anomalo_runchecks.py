@@ -25,7 +25,7 @@ class AnomaloRunCheck(BaseOperator):
         timeout_counter = 0
         job_id = run['run_checks_job_id']
 
-        # Checks runs every 30s until all runs complete or timeout limit is hit 
+        # Checks runs every 20s until all runs complete or timeout limit is hit 
         while (timeout_counter < timeout_max):
             run_result = self.api_client.get_run_result(job_id=job_id)
             num_pending_checks = sum(
